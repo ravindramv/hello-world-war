@@ -3,8 +3,9 @@ pipeline {
   stages {
     stage ('my build') {
       steps {
+        sh 'maven package'
         sh 'ls'
-        sh 'pwd'
+        
       }
     }
   }
