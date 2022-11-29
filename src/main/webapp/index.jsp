@@ -1,14 +1,14 @@
 <html>
 <head>
-<title>ravindra!</title>
+<title>fifa world cup 2022</title>
 </head>
 <body>
-	<h1>below are the topics completed till today!</h1>
-	<h2>1.linux commands</h2>
-	<h2>2.shell scripting.....</h2>
-	<h2>3.github</h2>
-	<h2>4.maven</h2>
-	<h2>5.jenkins</h2>
+	<h1>favourites</h1>
+	<h2>1.argentina</h2>
+	<h2>2.brazil</h2>
+	<h2>3.england</h2>
+	<h2>4.portugal</h2>
+	<h2>5.spain</h2>
 	<p>
 		It is now
 		<%= new java.util.Date() %></p>
