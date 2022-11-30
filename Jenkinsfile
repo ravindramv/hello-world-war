@@ -1,16 +1,16 @@
 pipeline {
-  agent {label 'deploynode'}
+  agent {label 'firstnode'}
   stages {
     stage ('my build') {
       steps {
-        sh 'mvn package'
+        sh 'sudo mvn package'
         sh 'ls'
+        sh 'scp -R target/slave@172.31.45.224:/opt/tomcat/webapps'
       }
     }
     stage ('my deploy') {
-      agent {label 'firstnode'}
+      agent {label 'slave'}
       steps {
-      sh 'sudo cp -R target/hello-world-war-1.0.0.war /opt/tomcat/webapps/'
       sh 'sudo sh /opt/tomcat/bin/shutdown.sh'
       sh 'sleep 2'
       sh 'sudo sh /opt/tomcat/bin/startup.sh'
