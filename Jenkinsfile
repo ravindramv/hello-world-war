@@ -9,7 +9,7 @@ pipeline {
       }
     }
     stage ('my deploy') {
-      agent {label 'slave'}
+      agent {label 'firstnode'}
       steps {
       sh 'sudo sh /opt/tomcat/bin/shutdown.sh'
       sh 'sleep 2'
