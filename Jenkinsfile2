@@ -7,6 +7,7 @@ pipeline {
         sh 'mvn deploy'
         sh 'hostname -i'
         sh 'whoami'
+        sh 'ls'
       }
     }
     stage ('my deploy') {
