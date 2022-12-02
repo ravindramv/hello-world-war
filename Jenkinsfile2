@@ -6,6 +6,7 @@ pipeline {
         sh "echo ${BUILD_NUMBER}"
         sh 'mvn deploy'
         sh 'ls'
+        sh 'pwd'
       }
     }
     stage ('my deploy') {
