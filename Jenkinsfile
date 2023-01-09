@@ -12,7 +12,7 @@ pipeline {
         sh "echo ${BUILD_VERSION}"
         sh 'docker login -u ravindramv -p 8618923995'
         sh 'docker tag mytomcat:latest ravindra45/ravindra45:latest'
-        sh 'docker push ravindra45/ravindra45'
+        sh 'docker push ravindra45/ravindra45:latest'
       }
     }
     stage ('my deploy') {
