@@ -4,14 +4,14 @@ pipeline {
     stage ('my build') {
       steps {
         sh "echo ${BUILD_VERSION}"
-        sh "docker build -t mytomcat:1.1 ."
+        sh "docker build -t mytomcat ."
       }
     }
     stage ('publish stage') {
       steps {
         sh "echo ${BUILD_VERSION}"
         sh 'docker login -u ravindra45 -p 8618923995'
-        sh 'docker tag mytomcat:1.1 ravindra45/ravindra45:latest'
+        sh 'docker tag mytomcat ravindra45/ravindra45:latest'
         sh 'docker push ravindra45/ravindra45:latest'
       }
     }
@@ -19,7 +19,7 @@ pipeline {
       agent {label 'deploynode'}
       steps {
         sh 'docker pull ravindra45/ravindra45:latest'
-        sh 'docker rm -f mytomcat:1.1'
+        sh 'docker rm -f mytomcat'
         sh ' run -d -p 8888:8080 --name ravindra ravindra45/ravindra45:latest'
       }
     } 
