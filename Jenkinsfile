@@ -20,7 +20,7 @@ pipeline {
       steps {
         sh 'docker pull ravindra45/ravindra45:latest'
         sh 'docker rm -f mytomcat'
-        sh 'docker run -d -p 9090:8080 --name ravi ravindra45/ravindra45:latest'
+        sh 'docker run -d -p 8080:8080 --name ravi ravindra45/ravindra45:latest'
       }
     } 
   }
