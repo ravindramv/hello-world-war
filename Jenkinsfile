@@ -1,5 +1,5 @@
 pipeline {
-  agent {label 'deploynode'}
+  agent {label 'firstnode'}
   stages {
     stage ('my build') {
       steps {
@@ -16,7 +16,7 @@ pipeline {
       }
     }
     stage ('my deploy') {
-      agent {label 'firstnode'}
+      agent {label 'deploynode'}
       steps {
         sh 'docker pull ravindra45/ravindra45:latest'
         sh 'docker rm -f mytomcat'
