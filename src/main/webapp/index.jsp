@@ -1,14 +1,14 @@
 <html>
 <head>
-<title>fifa world cup 2022</title>
+<title>ravindra page</title>
 </head>
 <body>
-	<h1>favourites</h1>
-	<h2>1.argentina</h2>
-	<h2>2.brazil</h2>
-	<h2>3.england</h2>
-	<h2>4.portugal</h2>
-	<h2>5.spain</h2>
+	<h1>naruto shippeden</h1>
+	<h2>1.naruto</h2>
+	<h2>2.itachi</h2>
+	<h2>3.kakashi</h2>
+	<h2>4.jiraya</h2>
+	<h2>5.minato</h2>
 	<p>
 		It is now
 		<%= new java.util.Date() %></p>
