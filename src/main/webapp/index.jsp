@@ -4,8 +4,8 @@
 </head>
 <body>
 	<h1>naruto shippeden</h1>
-	<h2>1.naruto</h2>
-	<h2>2.itachi</h2>
+	<h2>1.naruto uzumaki</h2>
+	<h2>2.itachi uchiha</h2>
 	<h2>3.kakashi</h2>
 	<h2>4.jiraya</h2>
 	<h2>5.minato</h2>
