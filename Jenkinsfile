@@ -11,7 +11,7 @@ pipeline {
       steps {
         sh "echo ${BUILD_VERSION}"
         withCredentials([usernamePassword(credentialsId: 'Dockerhub', passwordVariable: 'DockerhubPassword', usernameVariable: 'DockerhubUser')]) {
-          sh "docker login -u ${env.DockerhubUser} -p ${env.DockerhubPassword}"
+        sh "docker login -u ${env.DockerhubUser} -p ${env.DockerhubPassword}"
         sh 'docker tag mytomcat ravindra45/ravindra45:${BUILD_VERSION}'
         sh 'docker push ravindra45/ravindra45:${BUILD_VERSION}'
         }  
