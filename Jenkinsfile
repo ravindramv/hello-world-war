@@ -13,8 +13,8 @@ pipeline {
         sh "echo ${BUILD_VERSION}"
         withCredentials([usernamePassword(credentialsId: 'Dockerhub', passwordVariable: 'DockerhubPassword', usernameVariable: 'DockerhubUser')]) {
         sh "docker login -u ${env.DockerhubUser} -p ${env.DockerhubPassword}"
-        sh 'docker tag mytomcat ravindra45/ravindra45:${BUILD_VERSION}'
-        sh 'docker push ravindra45/ravindra45:${BUILD_VERSION}'
+        sh 'docker tag mytomcat ravindra45/ravindra45:${BUILD_NUMBER}'
+        sh 'docker push ravindra45/ravindra45:${BUILD_NUMBER}'
           
         sh 'curl -uravindramv110296@gmail.com:Ravindramv45110296@ -T tomcat-${BUILD_NUMBER}.tgz \"https://jfrogforhelm.jfrog.io/artifactory/helm/tomcat-${BUILD_NUMBER}.tgz\"'  
         }  
