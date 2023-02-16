@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage ('my build') {
       steps {
-        sh "echo ${BUILD_VERSION}"
+        sh "echo ${BUILD_NUMBER}"
         sh "docker build -t mytomcat ."
         sh 'helm package ./helm/tomcat --version=${BUILD_NUMBER}'
       }
