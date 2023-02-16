@@ -26,7 +26,7 @@ pipeline {
         sh 'helm repo add helm https://jfrogforhelm.jfrog.io/artifactory/api/helm/helm --username ravindramv110296@gmail.com --password Ravindramv45110296@'
         sh 'helm repo update'
         sh 'helm repo list'
-        sh 'helm upgrade --install mytomcat helm/tomcat --version=${BUILD_NUMBER} --set selector_label=tomcat --set deployment_name=tomcat --set replicas=2 --set registry_name=ravindra45 --set docker_repo_name=ravindra45 --set image_tag=${BUILD_NUMBER} --set port_name=tomcat --set target_port=8080 --set port=8080'
+        sh 'sudo helm upgrade --install mytomcat helm/tomcat --version=${BUILD_NUMBER} --set selector_label=tomcat --set deployment_name=tomcat --set replicas=2 --set registry_name=ravindra45 --set docker_repo_name=ravindra45 --set image_tag=${BUILD_NUMBER} --set port_name=tomcat --set target_port=8080 --set port=8080'
       }
     } 
   }
